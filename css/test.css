@@ -1,0 +1,418 @@
+/* Стили для секции тестирования */
+.test-container {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 30px;
+    min-height: 600px;
+}
+
+.test-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.test-header h1 {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.test-header p {
+    color: var(--gray-color);
+    font-size: 1.1rem;
+}
+
+/* Экран начала теста */
+.test-screen {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.test-screen.active {
+    display: block;
+}
+
+.start-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.start-content h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+.test-info {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.info-card {
+    background: var(--light-color);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    width: 180px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow);
+}
+
+.info-card i {
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+.info-card h3 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.info-card p {
+    color: var(--gray-color);
+    font-size: 0.9rem;
+}
+
+.start-btn {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: var(--transition);
+    box-shadow: 0 5px 15px rgba(26, 35, 126, 0.3);
+}
+
+.start-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(26, 35, 126, 0.4);
+}
+
+.start-btn:active {
+    transform: translateY(-1px);
+}
+
+/* Прогресс теста */
+.test-progress {
+    margin-bottom: 30px;
+}
+
+.progress-bar {
+    height: 10px;
+    background-color: var(--light-color);
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent-color) 0%, var(--secondary-color) 100%);
+    width: 0%;
+    transition: width 0.5s ease;
+    border-radius: 5px;
+}
+
+.progress-text {
+    text-align: center;
+    color: var(--gray-color);
+    font-size: 0.9rem;
+}
+
+/* Контейнер вопросов */
+.question-container {
+    background: var(--light-color);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    margin-bottom: 30px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.question-text {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+/* Варианты ответов */
+.answer-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.answer-option {
+    background: white;
+    border: 2px solid #ddd;
+    border-radius: var(--border-radius);
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.answer-option:hover {
+    border-color: var(--accent-color);
+    background-color: #f0f2ff;
+}
+
+.answer-option.selected {
+    border-color: var(--accent-color);
+    background-color: #e8eaf6;
+}
+
+.answer-option.correct {
+    border-color: var(--success-color);
+    background-color: #e8f5e9;
+}
+
+.answer-option.incorrect {
+    border-color: var(--danger-color);
+    background-color: #ffebee;
+}
+
+.option-letter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-color: var(--accent-color);
+    color: white;
+    border-radius: 50%;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.option-text {
+    flex: 1;
+}
+
+/* Управление тестом */
+.test-controls {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.control-btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+}
+
+.control-btn.primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.control-btn.secondary {
+    background-color: #e0e0e0;
+    color: var(--dark-color);
+}
+
+.control-btn.success {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.control-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--box-shadow);
+}
+
+.control-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Экран результатов */
+.results-container {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.results-header {
+    margin-bottom: 30px;
+}
+
+.results-header i {
+    font-size: 3rem;
+    color: gold;
+    margin-bottom: 15px;
+}
+
+.results-header h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
+.score-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.score-circle {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: conic-gradient(var(--accent-color) 0% 0%, #e0e0e0 0% 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.score-circle::before {
+    content: '';
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    background: white;
+    border-radius: 50%;
+}
+
+#score-value {
+    position: relative;
+    z-index: 1;
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.score-total {
+    position: relative;
+    z-index: 1;
+    font-size: 1.5rem;
+    color: var(--gray-color);
+}
+
+.score-text h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.score-text p {
+    color: var(--gray-color);
+    font-size: 1.1rem;
+}
+
+.results-details {
+    background: var(--light-color);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.results-details h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.result-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.result-item:last-child {
+    border-bottom: none;
+}
+
+.result-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.result-status.correct i {
+    color: var(--success-color);
+}
+
+.result-status.incorrect i {
+    color: var(--danger-color);
+}
+
+.result-points {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.results-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.action-btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.action-btn.primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.action-btn.secondary {
+    background-color: #e0e0e0;
+    color: var(--dark-color);
+}
+
+.action-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--box-shadow);
+}
