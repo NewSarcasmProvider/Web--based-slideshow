@@ -28,10 +28,6 @@
                     <i class="fas fa-graduation-cap"></i>
                     <span>Тестирование</span>
                 </button>
-                <button class="nav-btn" data-section="progress">
-                    <i class="fas fa-chart-line"></i>
-                    <span>Прогресс</span>
-                </button>
             </div>
         </div>
     </nav>
@@ -57,14 +53,6 @@
                 <!-- Индикаторы слайдов -->
                 <div class="indicators">
                     <div class="indicators-container" id="indicators-container"></div>
-                </div>
-                
-                <!-- Поиск по глоссарию -->
-                <div class="search-container">
-                    <input type="text" id="search-input" placeholder="Поиск терминов...">
-                    <button id="search-btn">
-                        <i class="fas fa-search"></i>
-                    </button>
                 </div>
             </div>
         </section>
@@ -169,70 +157,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- Секция Прогресса -->
-        <section id="progress-section" class="content-section">
-            <div class="progress-container">
-                <div class="progress-header">
-                    <h1><i class="fas fa-chart-line"></i> Ваш прогресс</h1>
-                    <p>Отслеживайте ваше обучение методологии SCRUM</p>
-                </div>
-                
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <div class="stat-icon">
-                            <i class="fas fa-book-open"></i>
-                        </div>
-                        <div class="stat-content">
-                            <h3>Изучено терминов</h3>
-                            <div class="stat-value" id="studied-terms">0/10</div>
-                            <div class="stat-bar">
-                                <div class="stat-fill" id="terms-progress"></div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="stat-card">
-                        <div class="stat-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <div class="stat-content">
-                            <h3>Лучший результат</h3>
-                            <div class="stat-value" id="best-score">0/100</div>
-                            <div class="stat-detail">Всего тестов: <span id="tests-taken">0</span></div>
-                        </div>
-                    </div>
-                    
-                    <div class="stat-card">
-                        <div class="stat-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div class="stat-content">
-                            <h3>Активность</h3>
-                            <div class="stat-value" id="last-active">Недавно</div>
-                            <div class="stat-detail">Впервые: <span id="first-active">Сегодня</span></div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="history-section">
-                    <h3>История тестирования</h3>
-                    <div class="history-list" id="test-history">
-                        <div class="empty-history">
-                            <i class="fas fa-history"></i>
-                            <p>Здесь будет отображаться история ваших тестов</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="reset-section">
-                    <button id="reset-progress-btn" class="reset-btn">
-                        <i class="fas fa-trash-alt"></i> Сбросить прогресс
-                    </button>
-                    <p class="reset-warning">Это действие удалит всю историю и прогресс</p>
-                </div>
-            </div>
-        </section>
     </main>
 
     <!-- Подвал -->
@@ -249,10 +173,6 @@
                         <i class="fas fa-bug"></i> Сообщить об ошибке
                     </a>
                 </p>
-            </div>
-            <div class="footer-stats">
-                <span id="total-visits">Посещений: 0</span>
-                <span id="version">v1.1.0</span>
             </div>
         </div>
     </footer>
