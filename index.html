@@ -1,229 +1,267 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Глоссарий: SCRUM в образовании</title>
-    <link rel="stylesheet" href="style.css">
+    <title>SCRUM Глоссарий | Образование</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/test.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
-    <div class="presentation-container">
-        <!-- Слайд 1: Заглавный -->
-        <div class="slide active" id="slide1">
-            <div class="slide-content">
-                <div class="header">
-                    <h1>Глоссарий</h1>
-                    <h2>Гибкая методология SCRUM в образовательном процессе</h2>
-                    <div class="controls">
-                        <span>Используйте стрелки ← → для навигации</span>
-                    </div>
-                </div>
-                <div class="definition">
-                    <div class="term">
-                        <i class="fas fa-graduation-cap"></i>
-                        <h3>SCRUM в образовании</h3>
-                    </div>
-                    <div class="definition-text">
-                        <p>Адаптация гибкой методологии управления проектами SCRUM для использования в образовательном
-                            процессе. Позволяет организовать учебную деятельность в виде последовательности коротких
-                            итераций (спринтов), сфокусированных на достижении конкретных учебных целей.</p>
-                    </div>
-                </div>
-                <div class="slide-counter">Слайд 1 из 10</div>
+    <!-- Навигационное меню -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-scroll"></i>
+                <span>SCRUM Глоссарий</span>
+            </div>
+            <div class="nav-menu">
+                <button class="nav-btn active" data-section="glossary">
+                    <i class="fas fa-book"></i>
+                    <span>Глоссарий</span>
+                </button>
+                <button class="nav-btn" data-section="test">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Тестирование</span>
+                </button>
+                <button class="nav-btn" data-section="progress">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Прогресс</span>
+                </button>
             </div>
         </div>
+    </nav>
 
-        <!-- Слайд 2 -->
-        <div class="slide" id="slide2">
-            <div class="slide-content">
-                <div class="definition">
-                    <div class="term">
-                        <i class="fas fa-sync-alt"></i>
-                        <h3>Спринт (Sprint)</h3>
-                    </div>
-                    <div class="definition-text">
-                        <p>Короткий, фиксированный по времени период (обычно 1-4 недели), в течение которого учебная
-                            группа работает над выполнением определённого набора учебных задач. В конце каждого спринта
-                            проводится демонстрация результатов и ретроспектива для анализа процесса работы.</p>
-                    </div>
+    <!-- Основной контейнер -->
+    <main class="main-container">
+        <!-- Секция Глоссария -->
+        <section id="glossary-section" class="content-section active">
+            <div class="presentation-container">
+                <!-- Слайды будут генерироваться через JS -->
+                <div id="slides-container"></div>
+                
+                <!-- Навигация слайдов -->
+                <div class="navigation">
+                    <button class="nav-btn prev-btn" aria-label="Предыдущий слайд">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="nav-btn next-btn" aria-label="Следующий слайд">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
-                <div class="slide-counter">Слайд 2 из 10</div>
-            </div>
-        </div>
 
-        <!-- Слайд 3 -->
-        <div class="slide" id="slide3">
-            <div class="slide-content">
-                <div class="definition">
-                    <div class="term">
-                        <i class="fas fa-tasks"></i>
-                        <h3>Учебный бэклог (Educational Backlog)</h3>
-                    </div>
-                    <div class="definition-text">
-                        <p>Приоритизированный список учебных задач, тем и компетенций, которые необходимо освоить в
-                            рамках учебного курса или модуля. Формируется преподавателем с учётом учебной программы и
-                            постоянно актуализируется в процессе обучения.</p>
-                    </div>
+                <!-- Индикаторы слайдов -->
+                <div class="indicators">
+                    <div class="indicators-container" id="indicators-container"></div>
                 </div>
-                <div class="slide-counter">Слайд 3 из 10</div>
-            </div>
-        </div>
-
-        <!-- Слайд 4 -->
-        <div class="slide" id="slide4">
-            <div class="slide-content">
-                <div class="definition">
-                    <div class="term">
-                        <i class="fas fa-chalkboard-teacher"></i>
-                        <h3>SCRUM-мастер в образовании</h3>
-                    </div>
-                    <div class="definition-text">
-                        <p>Преподаватель или тьютор, который выполняет роль фасилитатора учебного процесса по
-                            методологии SCRUM. Помогает студентам организовать работу, устраняет препятствия, следит за
-                            соблюдением принципов SCRUM и способствует эффективному взаимодействию в учебной группе.</p>
-                    </div>
-                </div>
-                <div class="slide-counter">Слайд 4 из 10</div>
-            </div>
-        </div>
-
-        <!-- Слайд 5 -->
-        <div class="slide" id="slide5">
-            <div class="slide-content">
-                <div class="definition">
-                    <div class="term">
-                        <i class="fas fa-users"></i>
-                        <h3>Учебная команда (Student Team)</h3>
-                    </div>
-                    <div class="definition-text">
-                        <p>Самоорганизующаяся группа студентов (обычно 3-9 человек), которая совместно работает над
-                            выполнением учебных задач в течение спринта. Команда самостоятельно распределяет задачи
-                            между участниками и несет коллективную ответственность за достижение учебных целей спринта.
-                        </p>
-                    </div>
-                </div>
-                <div class="slide-counter">Слайд 5 из 10</div>
-            </div>
-        </div>
-
-        <!-- Слайд 6 -->
-        <div class="slide" id="slide6">
-            <div class="slide-content">
-                <div class="definition">
-                    <div class="term">
-                        <i class="fas fa-calendar-day"></i>
-                        <h3>Ежедневный стендап (Daily Stand-up)</h3>
-                    </div>
-                    <div class="definition-text">
-                        <p>Короткая (5-15 минут) ежедневная встреча учебной команды, на которой каждый участник отвечает
-                            на три вопроса: что было сделано вчера, что планируется сделать сегодня и какие есть
-                            препятствия в работе. Проводится для синхронизации работы и оперативного решения возникающих
-                            проблем.</p>
-                    </div>
-                </div>
-                <div class="slide-counter">Слайд 6 из 10</div>
-            </div>
-        </div>
-
-        <!-- Слайд 7 -->
-        <div class="slide" id="slide7">
-            <div class="slide-content">
-                <div class="definition">
-                    <div class="term">
-                        <i class="fas fa-chart-line"></i>
-                        <h3>Диаграмма сгорания задач (Burndown Chart)</h3>
-                    </div>
-                    <div class="definition-text">
-                        <p>Визуальный инструмент для отслеживания прогресса выполнения учебных задач в течение спринта.
-                            График показывает количество оставшейся работы по дням, позволяя команде и преподавателю
-                            оценить темп работы и вероятность завершения задач к концу спринта.</p>
-                    </div>
-                </div>
-                <div class="slide-counter">Слайд 7 из 10</div>
-            </div>
-        </div>
-
-        <!-- Слайд 8 -->
-        <div class="slide" id="slide8">
-            <div class="slide-content">
-                <div class="definition">
-                    <div class="term">
-                        <i class="fas fa-project-diagram"></i>
-                        <h3>Планирование спринта (Sprint Planning)</h3>
-                    </div>
-                    <div class="definition-text">
-                        <p>Встреча в начале каждого спринта, на которой учебная команда совместно с преподавателем
-                            определяет цели предстоящего спринта и отбирает учебные задачи из бэклога, которые будут
-                            выполнены в течение этого периода. На основе этого формируется спринт-бэклог.</p>
-                    </div>
-                </div>
-                <div class="slide-counter">Слайд 8 из 10</div>
-            </div>
-        </div>
-
-        <!-- Слайд 9 -->
-        <div class="slide" id="slide9">
-            <div class="slide-content">
-                <div class="definition">
-                    <div class="term">
+                
+                <!-- Поиск по глоссарию -->
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Поиск терминов...">
+                    <button id="search-btn">
                         <i class="fas fa-search"></i>
-                        <h3>Обзор спринта (Sprint Review)</h3>
-                    </div>
-                    <div class="definition-text">
-                        <p>Встреча в конце спринта, на которой учебная команда демонстрирует результаты работы,
-                            выполненной в течение спринта. Преподаватель и другие заинтересованные лица (возможно,
-                            другие студенты) дают обратную связь, обсуждают достижения и корректируют учебный бэклог на
-                            основе полученных результатов.</p>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция Тестирования -->
+        <section id="test-section" class="content-section">
+            <div class="test-container">
+                <div class="test-header">
+                    <h1><i class="fas fa-graduation-cap"></i> Тестирование знаний</h1>
+                    <p>Проверьте свои знания терминов SCRUM в образовании</p>
+                </div>
+                
+                <!-- Экран начала теста -->
+                <div id="test-start-screen" class="test-screen active">
+                    <div class="start-content">
+                        <h2>Готовы проверить свои знания?</h2>
+                        <div class="test-info">
+                            <div class="info-card">
+                                <i class="fas fa-question-circle"></i>
+                                <h3>10 вопросов</h3>
+                                <p>Разные типы заданий</p>
+                            </div>
+                            <div class="info-card">
+                                <i class="fas fa-clock"></i>
+                                <h3>5-7 минут</h3>
+                                <p>Примерное время прохождения</p>
+                            </div>
+                            <div class="info-card">
+                                <i class="fas fa-star"></i>
+                                <h3>100 баллов</h3>
+                                <p>Максимальный результат</p>
+                            </div>
+                        </div>
+                        <button id="start-test-btn" class="start-btn">
+                            Начать тест
+                            <i class="fas fa-play"></i>
+                        </button>
                     </div>
                 </div>
-                <div class="slide-counter">Слайд 9 из 10</div>
-            </div>
-        </div>
-
-        <!-- Слайд 10 -->
-        <div class="slide" id="slide10">
-            <div class="slide-content">
-                <div class="definition">
-                    <div class="term">
-                        <i class="fas fa-comments"></i>
-                        <h3>Ретроспектива спринта (Sprint Retrospective)</h3>
+                
+                <!-- Экран вопросов -->
+                <div id="test-questions-screen" class="test-screen">
+                    <div class="test-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progress-fill"></div>
+                        </div>
+                        <div class="progress-text">
+                            Вопрос <span id="current-question">1</span> из <span id="total-questions">10</span>
+                        </div>
                     </div>
-                    <div class="definition-text">
-                        <p>Встреча учебной команды после завершения спринта, посвященная анализу процесса работы.
-                            Команда обсуждает, что прошло хорошо, что можно улучшить и какие изменения внести в работу
-                            для повышения эффективности в следующем спринте. Фокус на непрерывном совершенствовании
-                            учебного процесса.</p>
+                    
+                    <div class="question-container" id="question-container">
+                        <!-- Вопросы будут генерироваться через JS -->
+                    </div>
+                    
+                    <div class="test-controls">
+                        <button id="prev-question-btn" class="control-btn secondary">
+                            <i class="fas fa-arrow-left"></i> Назад
+                        </button>
+                        <button id="next-question-btn" class="control-btn primary">
+                            Далее <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button id="finish-test-btn" class="control-btn success">
+                            Завершить тест <i class="fas fa-check"></i>
+                        </button>
                     </div>
                 </div>
-                <div class="slide-counter">Слайд 10 из 10</div>
+                
+                <!-- Экран результатов -->
+                <div id="test-results-screen" class="test-screen">
+                    <div class="results-container">
+                        <div class="results-header">
+                            <i class="fas fa-trophy"></i>
+                            <h2>Результаты тестирования</h2>
+                        </div>
+                        
+                        <div class="score-display">
+                            <div class="score-circle">
+                                <span id="score-value">0</span>
+                                <span class="score-total">/100</span>
+                            </div>
+                            <div class="score-text">
+                                <h3 id="score-message">Отличный результат!</h3>
+                                <p id="score-details">Вы ответили правильно на 8 из 10 вопросов</p>
+                            </div>
+                        </div>
+                        
+                        <div class="results-details">
+                            <h3>Детализация:</h3>
+                            <div id="results-list"></div>
+                        </div>
+                        
+                        <div class="results-actions">
+                            <button id="restart-test-btn" class="action-btn primary">
+                                <i class="fas fa-redo"></i> Пройти ещё раз
+                            </button>
+                            <button id="review-test-btn" class="action-btn secondary">
+                                <i class="fas fa-eye"></i> Просмотреть ответы
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция Прогресса -->
+        <section id="progress-section" class="content-section">
+            <div class="progress-container">
+                <div class="progress-header">
+                    <h1><i class="fas fa-chart-line"></i> Ваш прогресс</h1>
+                    <p>Отслеживайте ваше обучение методологии SCRUM</p>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>Изучено терминов</h3>
+                            <div class="stat-value" id="studied-terms">0/10</div>
+                            <div class="stat-bar">
+                                <div class="stat-fill" id="terms-progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>Лучший результат</h3>
+                            <div class="stat-value" id="best-score">0/100</div>
+                            <div class="stat-detail">Всего тестов: <span id="tests-taken">0</span></div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>Активность</h3>
+                            <div class="stat-value" id="last-active">Недавно</div>
+                            <div class="stat-detail">Впервые: <span id="first-active">Сегодня</span></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="history-section">
+                    <h3>История тестирования</h3>
+                    <div class="history-list" id="test-history">
+                        <div class="empty-history">
+                            <i class="fas fa-history"></i>
+                            <p>Здесь будет отображаться история ваших тестов</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="reset-section">
+                    <button id="reset-progress-btn" class="reset-btn">
+                        <i class="fas fa-trash-alt"></i> Сбросить прогресс
+                    </button>
+                    <p class="reset-warning">Это действие удалит всю историю и прогресс</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <p>SCRUM Глоссарий для образовательного процесса</p>
+                <p class="footer-links">
+                    <a href="#" id="view-on-github">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    |
+                    <a href="#" id="report-issue">
+                        <i class="fas fa-bug"></i> Сообщить об ошибке
+                    </a>
+                </p>
+            </div>
+            <div class="footer-stats">
+                <span id="total-visits">Посещений: 0</span>
+                <span id="version">v1.1.0</span>
             </div>
         </div>
+    </footer>
 
-        <!-- Навигационные стрелки -->
-        <div class="navigation">
-            <button class="nav-btn prev-btn" aria-label="Предыдущий слайд">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-            <button class="nav-btn next-btn" aria-label="Следующий слайд">
-                <i class="fas fa-chevron-right"></i>
-            </button>
-        </div>
-
-        <!-- Индикаторы слайдов -->
-        <div class="indicators">
-            <div class="indicators-container">
-                <!-- Индикаторы будут добавлены через JavaScript -->
-            </div>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+    <!-- Загрузка скриптов -->
+    <script src="data/glossary.json"></script>
+    <script src="js/slides.js"></script>
+    <script src="js/test.js"></script>
+    <script src="js/progress.js"></script>
+    <script src="js/main.js"></script>
 </body>
-
 </html>
