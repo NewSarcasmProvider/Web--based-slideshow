@@ -4,7 +4,7 @@
 
 ## 🚀 Демо
 
-[Посмотреть на GitHub Pages](https://ваш-логин.github.io/scrum-glossary/)
+[Посмотреть на GitHub Pages]([https://ваш-логин.github.io/scrum-glossary/](https://newsarcasmprovider.github.io/Web--based-slideshow/))
 
 ## 📋 Функциональность
 
